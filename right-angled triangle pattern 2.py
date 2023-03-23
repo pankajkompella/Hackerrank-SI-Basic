@@ -51,6 +51,17 @@ public class Solution {
     }
 }
 
+In python,
+n = int(input())
+
+for i in range(1,n+1):
+    a,b = 0,n-1
+    for j in range(1,i+1):
+        print(i+a,end=" ")
+        a+=b
+        b-=1
+    print()
+
 Self Explanatory
 '''
 
