@@ -25,4 +25,24 @@ Explanation 0
 
 Self Explanatory
 '''
+s = input().strip()
 
+length = 0
+i = 1
+n = len(s)
+lps = [0] * n
+
+while i < n:
+    if s[i] == s[length]:
+        length += 1
+        lps[i] = length
+        i += 1
+    else:
+        if length != 0:
+            length = lps[length - 1]
+        else:
+            lps[i] = 0
+            i += 1
+
+result = lps[-1]
+print(result)
