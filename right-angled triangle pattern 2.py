@@ -1,5 +1,4 @@
-#YET TO BE SOLVED
-
+#Solved
 '''
 Print right-angled triangle pattern. See example for more details.
 
@@ -28,5 +27,19 @@ Sample Output 0
 Explanation 0
 
 Self Explanatory
+Code:
 '''
+N = int(input())
+
+for i in range(1, N + 1):
+    diff = N - 1
+    value = i
+    for j in range(1, i + 1):
+        print(value, end=" ")
+
+        value += diff
+        diff -= 1
+
+    print()
+
 
